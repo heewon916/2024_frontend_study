@@ -1,0 +1,19 @@
+<script>
+    // 피보나치 수열 
+    var n_2 = 1;
+    var n_1 = 1;
+    for(var i=0; i<100; i++){
+        var n = n_2 + n_1;
+        n_2 = n_1; 
+        n_1 = n;
+        console.log(n);
+    }
+    var i = 0;
+    while(i<100){
+        var n = n_2 + n_1;
+        n_2 = n_1; 
+        n_1 = n;
+        console.log(n);
+        i++;
+    }
+</script>

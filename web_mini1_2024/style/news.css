@@ -1,0 +1,40 @@
+div.container{
+    border: 2px solid gray;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+header > span{
+    font-weight: 800;
+}
+header h1 {
+    margin: 5px 0;
+}
+.header-desc{
+    text-align: right;
+}
+.time-desc{
+    font-size: 10px; 
+    color: gray;
+}
+.white-button{
+    margin: 0 3px;
+    padding: 2px 5px;
+    background-color: white;
+    border: 1px solid gray;
+}
+.img-box{
+    background-color: #f0f0f0;
+    padding: 20 20 0 20px;
+    text-align: center;
+}
+.img-box img {
+    width: 100%;
+}
+.img-box span{
+    color: #606060;
+    font-size: 15px;
+}
+article p {
+    text-indent: 16px;
+}

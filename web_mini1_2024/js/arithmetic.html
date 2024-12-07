@@ -1,0 +1,54 @@
+<script>
+    console.log('안녕하세요'); // 개발자도구
+    alert('안녕하세요'); // 알림창; 사용자노출
+    prompt('값 입력하는 용도'); // input 유사
+
+    var printMsg = '계산 결과는?';
+    var number = 10;
+    var number2 = 5;
+    var numberFloat = 0.45;
+
+    var result;
+
+    console.log('각 변수 안의 값들 출력');
+    console.log(number);
+    console.log(number2);
+    console.log(numberFloat);
+    console.log(result); //undefined
+
+    /*주석
+    -> 여러 줄 짜리*/
+    //주석 -> 한줄짜리
+    result = number + numberFloat;
+    console.log('덧셈, '+printMsg);
+    console.log(result);
+    result = number - numberFloat;
+    console.log('뺄셈, '+printMsg);
+    console.log(result);
+    result = number * number2;
+    console.log('곱셈, '+printMsg);
+    console.log(result);
+    result = number / number2
+    console.log('나눗셈, '+printMsg);
+    console.log(result);
+    result = number % number2
+    console.log('나머지연산, '+printMsg);
+    console.log(result);
+
+
+    // 각 변수 값을 출력 
+    console.log('각 변수 안의 값들 출력');
+    console.log(number);
+    console.log(number2);
+    console.log(numberFloat);
+
+
+    // 복합연산 (곱셈 나눗셈 O)
+    numberFloat += 5;
+    console.log(numberFloat);
+
+    // 단항연산 (곱셈 나눗셈 X)
+    number ++; // 11
+    console.log(number);
+
+</script>

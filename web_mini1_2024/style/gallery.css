@@ -1,0 +1,32 @@
+*{
+    padding:0;
+    margin:0;   
+} /*모든 요소에 대해 */
+.cell{
+    display:inline-block;
+    width:30%; /*부모 row 요소의 너비의 30프로, 근데 따로 너비 지정 안하면 body의 30프로니까 윈도우의 30프로*/
+    margin:0 1%; /*상하 여백 0 너비의 1%*/
+}
+.cell img{
+    width: 100%; /*cell요소의 100% => 같은 너비니까 body의 30%*/
+
+}
+.row{
+    margin: 20px 0; /*상하 여백 20 좌우는 0*/
+    text-align: center;
+}
+header{
+    margin: 10px 5%; 
+    padding: 20px 0; 
+    border-bottom: 1px solid #000000;
+}
+
+header h1 {
+    font-size: 21px; 
+    display: inline; 
+}
+header span{
+    font-size: 14px;
+    font-weight: 800; 
+    background-color: #f0f000;
+}

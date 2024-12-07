@@ -1,0 +1,21 @@
+h1{
+    font-size: 18px; 
+    font-weight: 900; /*굵기 100-900*/
+    color: #303030;/*rgb(48, 48, 48)*/
+    line-height: 30px; 
+}
+th{
+    text-align: center;
+    font-size: 16px;
+    font-weight:600; 
+    color: #3333b0;  
+}
+a, a:visited{
+    color: #3333b0;
+    text-decoration: none; 
+    font-weight: 800;
+}
+img{
+    width: 200px; 
+    height: auto; 
+}

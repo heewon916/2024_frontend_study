@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0; 
+}
+ul, li{
+    list-style: none; 
+}
+button.transparent-button{
+    background-color: transparent; /*배경색이 투명해진다*/
+    border: 0;
+    outline: 0; /*클릭했을 때 외곽선을 안보이게 만들 수 있다.*/
+    cursor: pointer; /*마우스를 위에 올리면 손 모양으로 바꿀 수 있다*/
+}
+.container{
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px 0; 
+}
+
+article.card{
+    width: 600px;
+    margin: 20px auto;
+    margin-bottom: 60px;
+    background: #fff;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px; 
+}
+
+/***HEADER 시작 **/
+article.card header{
+    height: 40px;
+    padding: 10px; 
+}
+
+article.card header > div{
+    display: inline-block;
+    vertical-align: middle;   
+}
+.circle-image{
+    height: 100%; /**header의 크기 40px을 100으로 먹는다.**/
+    padding: 5px; /* 근데 padding을 5px씩 주면 실제 픽셀은 50px이 되고*/
+    box-sizing: border-box; /*사이드 넘치는 걸 막고자 border-box로 두면 height는 40으로 고정되게 만든다.*/
+}
+.circle-image > img{
+    height: 100%; /*즉, 이미지의 크기는 30px로 먹고 들어간다.*/
+    border-radius: 50%;
+}
+
+.card-username{
+    padding: 10px 0; 
+    font-weight: 900;
+    line-height: 20px;
+    margin-left: 5px; 
+    font-size: 13px; 
+}
+
+.option-more{
+    float: right; 
+    /*
+    이미지와 텍스트를 함께 배치할 때 이 float 속성은 유용하다. 이미지에 float="left"속성을 주면 이미지는 왼쪽으로 배치되고 뒤따르는 텍스트는 이미지를 감싸며 배치된다. float된 요소는 부모 컨테이너의 가장 왼쪽이나 오른쪽으로 이동한다. float된 요소후에 추가되는 요소는 float 요소를 감싸면서 배치된다. float된 요소 이전에 추가된 요소는 float의 영향을 받지 않는다. float속성으로는 요소를 레이아웃의 왼쪽이나 오른쪽으로만 배치될 수 있다. 위쪽이나 아래쪽으로는 float할 수 없다.
+    */
+    padding: 7px;
+}
+
+/***HEADER 종료 **/
+
+/***CONTENT 시작 **/
+.card-container{
+    padding: 5px 10px; 
+}
+
+/*버튼*/
+.card-buttons{
+    padding: 0 5px; 
+    margin-top: 5px; 
+}
+
+.card-buttons > div {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+.card-buttons > div.last-card-button{
+    float: right; 
+    margin-right: 0; 
+}
+
+/*좋아요*/
+.card-likes{
+    font-size: 13px; 
+    font-weight: 900;
+    padding: 5px;
+}
+
+/*본문*/
+.card-content{
+    padding: 2px 5px; 
+    font-size: 13px; 
+}
+
+.card-content li > div{
+    padding: 1px 0; 
+}
+
+.card-content li > div > span{
+    font-weight: 900; 
+}
+
+.card-content li.comment > div > button {
+    float: right; 
+}
+
+.card-content li.comment > div > button > img{
+    width: 12px; 
+    margin-right: 5px; 
+}
+
+/* 시간 */ 
+.card-time{
+    padding: 3px; 
+    font-size: 11px; 
+    color: #a0a0a0;
+}
+
+/*** FOOTER 시작 **/ 
+footer.card-comment {
+    position: relative; 
+    height: 55px; 
+    border-top: 1px solid #e0e0e0;
+}
+
+footer.card-comment input {
+    width: 100%; 
+    height: 100%; 
+    border: 0; 
+    outline: 0; 
+    padding: 0 15px; 
+    color: #606060;
+}
+
+footer.card-comment > div{
+    position: absolute;
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+footer.card-comment > div > button {
+    color: #0095f6; 
+    opacity: 0.5; 
+    padding: 10px 5px; 
+}
+
+/** 캐러셀 영역 **/
+article.card main .carousel {
+    width: 100%; 
+    position: relative;
+}
+
+article.card main .carousel > div {
+    overflow: hidden; /*div를 넘치는 영역은 숨긴다.*/
+}
+
+article.card main .carousel ul {
+    width: 10000px; /*사진을 담기 위해 충분한 너비를 준다.*/
+}
+
+article.card main .carousel ul > li {
+    display: inline-block; /*이미지 수평정렬*/
+}
+
+article.card main .carousel ul > li img {
+    width: 600px; 
+}
+
+.slide { /*슬라이드 버튼들 */
+    position: absolute; /*부모 태그 중 position이 static이 아닌 태그의 영역 내에서 논다. 현재는 carousel 영역 전체에 대해 absolute이 적용되는 것이다.*/
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px; 
+}
+
+.slide img {
+    opacity: 0.75;
+}
+
+.slide-right{
+    right: 0; 
+}
+
+.carousel footer {
+    position: absolute;
+    height: 20px;
+    /* margin: 0 auto; ==> 얘는 안 먹혀  */
+    text-align: center; 
+    width: 100%;
+    bottom: -20px; /*캐러셀 영역 기준 아래로 -20 잡으면 height가 20이므로 경계선이 딱 맞아 떨어진다.*/
+}
+
+.carousel footer div {
+    width: 6px; 
+    height: 6px; 
+    background-color: #a8a8a8;
+    display: inline-block;
+    border-radius: 50%; 
+}
+
+.carousel footer div.active {
+    background-color: #0095f6;
+}
